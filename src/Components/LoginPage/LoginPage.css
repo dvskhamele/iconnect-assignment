@@ -1,0 +1,61 @@
+.LoginContainer { 
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    justify-content: space-around;
+    margin: 3.6rem 0rem;
+}
+.leftPanel{
+    display: flex;
+    flex-direction: column;
+    border-left: 2px solid #34988e;
+}
+
+.InTab{
+    display: flex;
+    justify-content: space-around;
+}
+
+.InTab > label{
+    cursor: pointer;
+    font-size: 24px;
+    margin-bottom: 2rem;
+}
+
+/* .InTab > label:hover{
+    background-color: #a5a5a5;
+} */
+
+.InputCol{
+    display: flex;
+    flex-direction: column;
+}
+.InputCol > .InputRow{
+    padding: 5px 60px;
+    margin: 10px 0px;
+}
+.InputCol > .ButtonProcced{
+    padding: 5px 60px;
+    margin: 10px 0px;
+    background-color: #264653;
+    color: white;
+    border: none;
+}
+.RightPanel{
+    display: flex;
+    flex-direction: column;
+}
+.RightPanel>button{
+    margin: 10px 0px;
+    padding: 5px 60px;
+    border: none;
+    color: white;
+}
+
+.RightPanel > button:first-child{
+    background-color: #4185f5;
+}
+
+.RightPanel > button:last-child{
+    background-color: #5070a9;
+}

@@ -1,0 +1,29 @@
+[{
+    "id":1,
+    "image":"https://images.unsplash.com/photo-1612832164065-fc35ded2a291?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80" ,
+    "product_name": "Laptop",
+    "price":"300000" ,
+    "Description":"A laptop computer is a small personal computer. They are designed to be more portable than traditional desktop computers, with many of the same abilities. Laptops are able to be folded flat for transportation and have a built-in keyboard and touchpad. ... Your line of work will dictate the laptop type you need."
+},
+{
+    "id":2,
+    "image":"https://images.unsplash.com/photo-1612832164065-fc35ded2a291?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80" ,
+    "product_name": "Louis Vuitton Bag",
+    "price":"300000",
+    "Description":"Iconic bags of Louis Vuitton include the Speedy bag and Neverfull bags. Each season Louis Vuitton produces rare, limited edition bags that are generally only available by reservation through larger Louis Vuitton stores. ... It also allows LV to prevent counterfeit products entering its distribution channels."
+},
+{
+    "id":3,
+    "image":"https://images.unsplash.com/photo-1612832164065-fc35ded2a291?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80" ,
+    "product_name": "Ring",
+    "price":"300000" ,
+    "Description":"Ring, circular band of gold, silver, or some other precious or decorative material that is worn on the finger. Rings are worn not only on the fingers but also on toes, the ears (see earring), and through the nose."
+},
+{
+    "id":4,
+    "image":"https://images.unsplash.com/photo-1612832164065-fc35ded2a291?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80" ,
+    "product_name": "Jacket",
+    "price":"300000" ,
+    "Description":"A jacket is a garment for the upper body, usually extending below the hips. A jacket typically has sleeves, and fastens in the front or slightly on the side. A jacket is generally lighter, tighter-fitting, and less insulating than a coat, which is outerwear."
+}
+]

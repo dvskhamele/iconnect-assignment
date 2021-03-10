@@ -1,0 +1,41 @@
+
+/* .SearchBox{
+    width: 35rem;
+} */
+
+@media all and (max-width: 768px) and (min-width: 576px) {
+    .DropdownCategories{
+    display: flex;
+    flex-direction: column;     
+    }
+    .DropdownCategories > .Categories{
+        margin: 1rem 0rem ;
+    }
+    .DropdownCategories > .SearchBox{
+        margin: 0.5rem 0rem ;
+        /* display: none;
+        display: inline-block; */
+    }
+    .DropdownCategories > .Location{
+        margin: 1rem 0rem ;
+    }
+}
+
+
+@media all and (max-width: 575.9px) {
+    .DropdownCategories{
+        display: flex;
+        flex-direction: column;     
+        }
+        .DropdownCategories > .Categories{
+            margin: 1rem 0rem ;
+        }
+        .DropdownCategories > .SearchBox{
+            margin: 0.5rem 0rem ;
+            /* display: none;
+            display: inline-block; */
+         }
+        .DropdownCategories > .Location{
+            margin: 1rem 0rem ;
+        }
+}
