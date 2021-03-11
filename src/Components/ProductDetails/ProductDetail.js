@@ -17,6 +17,7 @@ const ProductDetail = (props) => {
   const product_name = localStorage.getItem("product_name");
   const price = localStorage.getItem("price");
   const description = localStorage.getItem("description");
+
   return (
     <div>
       <NavbarComponent />
@@ -34,27 +35,31 @@ const ProductDetail = (props) => {
               <div className="btn_SubCategory">
                 <div className="MoreProducts">
                   <Row className="mx-auto">
-                    {data.map((dashBoard, index) => (
-                      <Col
-                        sm={12}
-                        md={6}
-                        lg={4}
-                        className="my-3 d-flex justify-content-center"
-                      >
-                        <Products
-                          Price={dashBoard.price}
-                          image={dashBoard.image}
-                          P_name={dashBoard.product_name}
-                          key={index}
-                          id={index}
-                          Description={dashBoard.Description}
-                          cardHeight={"11rem"}
-                          ImageHeight={"11rem"}
-                          TitleSize={"12px"}
-                          CardBodyPadding={"0.6rem"}
-                        />
-                      </Col>
-                    ))}
+                    {
+                      data
+                        .map((dashBoard, index) => (
+                          <Col
+                            sm={12}
+                            md={6}
+                            lg={4}
+                            className="my-3 d-flex justify-content-center"
+                          >
+                            <Products
+                              Price={dashBoard.price}
+                              image={dashBoard.image}
+                              P_name={dashBoard.product_name}
+                              key={index}
+                              id={index}
+                              Description={dashBoard.Description}
+                              cardHeight={"11rem"}
+                              ImageHeight={"11rem"}
+                              TitleSize={"12px"}
+                              CardBodyPadding={"0.6rem"}
+                            />
+                          </Col>
+                        ))
+                        .sort(() => (Math.random() > 0.5 ? 1 : -1))
+                        .slice(0, 3)}
                   </Row>
                 </div>
               </div>
