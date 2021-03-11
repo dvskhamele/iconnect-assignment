@@ -6,6 +6,10 @@ import ProductCard from "./ProductCard";
 import "./ProductDetail.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlay, faShoppingCart } from "@fortawesome/free-solid-svg-icons";
+import "./MediaQueries.css";
+import data from "../../ProductDetails.json";
+import { NavLink } from "react-router-dom";
+import Products from "../HomePage/Products";
 
 const ProductDetail = (props) => {
   const productId = localStorage.getItem("ProductId");
@@ -17,7 +21,6 @@ const ProductDetail = (props) => {
     <div>
       <NavbarComponent />
       <div className="container">
-        {/* <h1>{props.location.aboutProps.product_name}</h1> */}
         <div className="Product_detail">
           <div className="leftSide">
             <div className="leftSideFirstPart">
@@ -29,54 +32,31 @@ const ProductDetail = (props) => {
             <div className="leftSideLastPart">
               <h3>More Products</h3>
               <div className="btn_SubCategory">
-                <a
-                  style={{ width: "25%" }}
-                  className="btn btn-success subCategory_Element"
-                >
-                  Sub Category
-                </a>
-                <a
-                  style={{ width: "25%" }}
-                  className="btn btn-success subCategory_Element"
-                >
-                  Sub Category
-                </a>
-                <a
-                  style={{ width: "25%" }}
-                  className="btn btn-success subCategory_Element"
-                >
-                  Sub Category
-                </a>
-                <a
-                  style={{ width: "25%" }}
-                  className="btn btn-success subCategory_Element"
-                >
-                  Sub Category
-                </a>
-                <a
-                  style={{ width: "25%" }}
-                  className="btn btn-success subCategory_Element"
-                >
-                  Sub Category
-                </a>
-                <a
-                  style={{ width: "25%" }}
-                  className="btn btn-success subCategory_Element"
-                >
-                  Sub Category
-                </a>
-                <a
-                  style={{ width: "25%" }}
-                  className="btn btn-success subCategory_Element"
-                >
-                  Sub Category
-                </a>
-                <a
-                  style={{ width: "25%" }}
-                  className="btn btn-success subCategory_Element"
-                >
-                  Sub Category
-                </a>
+                <div className="MoreProducts">
+                  <Row className="mx-auto">
+                    {data.map((dashBoard, index) => (
+                      <Col
+                        sm={12}
+                        md={6}
+                        lg={4}
+                        className="my-3 d-flex justify-content-center"
+                      >
+                        <Products
+                          Price={dashBoard.price}
+                          image={dashBoard.image}
+                          P_name={dashBoard.product_name}
+                          key={index}
+                          id={index}
+                          Description={dashBoard.Description}
+                          cardHeight={"11rem"}
+                          ImageHeight={"11rem"}
+                          TitleSize={"12px"}
+                          CardBodyPadding={"0.6rem"}
+                        />
+                      </Col>
+                    ))}
+                  </Row>
+                </div>
               </div>
             </div>
           </div>

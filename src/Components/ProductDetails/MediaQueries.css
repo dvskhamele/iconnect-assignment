@@ -1,0 +1,22 @@
+@media all and (max-width: 995px) {
+  .leftSideFirstPart > img {
+    height: 16rem;
+  }
+  .Product_detail {
+    flex-direction: column;
+    align-items : center;
+  }
+  .subCategory_Element {
+    width: 20%;
+    padding: 0.5rem;
+    font-size: 10px;
+  }
+  .rightSide {
+    margin-left: 0rem;
+    padding: 0rem 1rem;
+    border-radius: 8px;
+    margin:1rem;
+  }
+}
+/* @media all and (max-width: 575.9px) {
+} */

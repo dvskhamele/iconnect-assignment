@@ -4,7 +4,7 @@ import { Card, Col, Row } from "react-bootstrap";
 const ProductCard = () => {
   return (
     <>
-      <Col sm={2} md={2} lg={2} className="my-2 d-flex justify-content-center">
+      <Col sm={4} md={4} lg={4} className="my-2 d-flex justify-content-center">
         <Card
           style={{
             backgroundColor:"#2a9d8e",

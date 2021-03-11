@@ -12,28 +12,41 @@ const SignUpPage = () => {
   const [firstname, setFirstname] = useState("");
   const [lastname, setLastname] = useState("");
   const [mobile, setMobile] = useState();
+  var fd = new FormData({});
 
-  async function SignUpAPI() {
-    await axios
-      .post(  url + "/api/v1/user/signup", {
-        username,
-        firstname,
-        lastname,
-        mobile,
-        email,
-        password,
-      })
-      .then((res) => {
-        console.log("Login", res);
-        console.log("res", res.data.accessToken);
-        <Redirect to="/" />;
-        // localStorage.setItem("token", res.data.accessToken);
-        alert(res.data.message);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+  // async function SignUpAPI() {
+  //   await axios
+  //     .post(  url + "/api/v1/user/signup", {
+  //       username,
+  //       firstname,
+  //       lastname,
+  //       mobile,
+  //       email,
+  //       password,
+  //     })
+  //     .then((res) => {
+  //       console.log("Login", res);
+  //       console.log("res", res.data.accessToken);
+  //       <Redirect to="/" />;
+  //       // localStorage.setItem("token", res.data.accessToken);
+  //       alert(res.data.message);
+  //     })
+  //     .catch((err) => {
+  //       console.log(err);
+  //     });
+  // }
+
+
+  const SignUpDetails = () => {
+    fd.append("username",username);
+    fd.append("firstName",firstname);
+    fd.append("lastName",lastname);
+    fd.append("mobile",mobile);
+    fd.append("email",email);
+    fd.append("password",password);
   }
+
+
 
   return (
     <>
@@ -110,7 +123,7 @@ const SignUpPage = () => {
                 setPassword(e.target.value);
               }}
             />
-            <button className="ButtonProcced" onClick={SignUpAPI}>
+            <button className="ButtonProcced" onClick={SignUpDetails}>
               Proceed
             </button>
           </div>

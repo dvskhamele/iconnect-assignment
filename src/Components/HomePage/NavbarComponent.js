@@ -7,7 +7,7 @@ import SignUpPage from "../LoginPage/SignUpPage";
 import { Redirect, Route, Switch } from "react-router-dom";
 
 const NavbarComponent = () => {
-  const StatusCode = localStorage.getItem("Status");
+  const Username = localStorage.getItem("Username");
 
   return (
     <>
@@ -26,10 +26,10 @@ const NavbarComponent = () => {
             <Nav.Link>Category Six</Nav.Link>
           </Nav>
           <Nav>
-            {StatusCode ? (
+            {Username ? (
               <div style={{ display: "flex", alignItems: "center" }}>
                 <Nav.Link>
-                  Hi, User
+                  Hi, {Username}
                   <Image
                     src={user}
                     roundedCircle

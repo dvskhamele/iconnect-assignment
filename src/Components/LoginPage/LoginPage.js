@@ -3,31 +3,50 @@ import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import { url } from "../GlobalUrl/GlobalUrl";
 import "./LoginPage.css";
+import data from "../../UserDetails.json"
 
 const LoginPage = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  async function LoginAPI() {
-    await axios
-      .post(url + "/api/v1/user/login/", {
-        email,
-        password,
-      })
-      .then((res) => {
-        console.log("Login", res);
-        console.log("res", res.data.accessToken);
-        localStorage.setItem("token", res.data.accessToken);
-        if (res.status === 200) {
-          alert(res.data.message);
-          localStorage.setItem("Status",res.status);
-          window.location.replace("/");
-        }
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+const loginUser =() => {
+
+  data.forEach(loginValidator);
+  function loginValidator(value,index,array){
+    if(value.email === email && value.password === password){
+      alert("Login Successful");
+      window.location.replace("/")
+      localStorage.setItem("Username",value.username)
+    }else{
+      alert("Wrong Email or Password");
+    }
   }
+}
+
+
+
+  // async function LoginAPI() {
+  //   await axios
+  //     .post(url + "/api/v1/user/login/", {
+  //       email,
+  //       password,
+  //     })
+  //     .then((res) => {
+  //       console.log("Login", res);
+  //       console.log("res", res.data.accessToken);
+  //       localStorage.setItem("token", res.data.accessToken);
+  //       if (res.status === 200) {
+  //         alert(res.data.message);
+  //         localStorage.setItem("Status",res.status);
+  //         window.location.replace("/");
+  //       }
+  //     })
+  //     .catch((err) => {
+  //       console.log(err);
+  //     });
+  // }
+
+
 
   return (
     <>
@@ -62,7 +81,7 @@ const LoginPage = () => {
                 setPassword(e.target.value);
               }}
             />
-            <button className="ButtonProcced" onClick={LoginAPI}>
+            <button className="ButtonProcced" onClick={loginUser} >
               Proceed
             </button>
           </div>
